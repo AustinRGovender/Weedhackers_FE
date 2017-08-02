@@ -1,0 +1,522 @@
+﻿<!--MAKE SURE YOU NOTE ALL CHANGES YOU MAKE ON A PAGE-->
+<!--DO NOT MAKE CHANGES ON THIS FILE, MAKE A COPY FIRST BEFORE EDITING-->
+<!--ADHI, HANDLE THE IMAGES AND SIZINGM, ALL IMAGES MUST BE CLEAR AND THE SAME SIZE DEPENDING ON THER ELEMENT IT WILL BE INSERTED IN.  eg. the gallery should have small sized images but all should be the same size-->
+<!--DEADLINE IS WEDNESDAY, WHICH MEANS THAT YOU GUYS NEED TO BE ON THE BALL LOL-->
+
+<!--CHANGE PARALLAX IMAGES AND TEXT AS REQUIRED. KEEP [IT] CLEAN :) -->
+
+
+<!DOCTYPE html>
+<html>
+<title>WeedHackers</title>
+<link rel="icon" type="image/png" href="~/Content/Images/finalIcon.png" />
+<meta charset="UTF-8">
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+@*<script src="~/Scripts/jquery-3.1.1.min.js"></script>*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="~/Content/BodyStyle.css" rel="stylesheet" />
+
+<link href="~/Content/loadMore.css" rel="stylesheet" />
+<script src="~/Scripts/loadMore.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('../../Content/Images/b3.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url('../../Content/Images/b3.jpg');
+        /*background-image: url("/w3images/parallax2.jpg");*/
+        min-height: 400px;
+    }
+
+/* Third image (Contact) */
+    .bgimg-3 {
+        /*background-image: url("/w3images/parallax3.jpg");*/
+        background-image: url('../../Content/Images/b3.jpg');
+        min-height: 400px;
+    }
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+</style>
+
+
+
+<body class="bgStyle">
+
+    <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-text-green w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-text-black w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-text-black w3-button w3-hide-small"><i class="fa fa-th"></i> GALLERY</a>
+            <a href="#our-team" class="w3-bar-item w3-text-black w3-button w3-hide-small"><i class="fa fa-user"></i> TEAM</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-text-black w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+           
+            <a href="#" class="w3-bar-block  w3-text-black w3-xlarge w3-button w3-hide-small w3-right w3-hover-red">
+
+                @*=================*@
+                 WeedHackers&trade;
+                <img src="~/Content/Images/finalIcon.png" class="img-circle" height="40" width="40" />
+
+                @*<i class="fa fa-search"></i>*@
+                @*=================*@
+            </a>
+        </div>
+
+         @*Navbar on small screens*@ 
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+
+    <!--can either use a carousel element as the landing container or use a static image with the logo, you decide and code it if possible-->
+    <!--if sticking with the static image, encase the title in a bar or leave as is, must be legible-->
+
+    <!-- First Parallax Image with Logo Text -->
+
+    <div class="bgimg-1 w3-display-container " id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-text-black w3-jumbo w3-animate-opacity"> WeedHackers <img src="~/Content/Images/finalIcon.png" class="img-circle" height="150" width="150" /></span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT US</h3>
+        <p class="w3-center"><em>DOING IT RIGHT THE FIRST TIME!</em></p>
+        <p>
+            Our Story Established in 2000, Weed Hackers, a 100% BEE company, has been committed to environmental and waste management. Haven been in existence for the past 16 years, Weed Hackers have provided consistent and efficient service to the community. Founded by popular environmentalist, the late John Smith, Weed Hackers
+
+            have a workforce dedicated to John’s dream of creating a sustainable environment. We are driven to provide the highest quality service to our customers while maintaining the natural beauty of our planet. All undertakings of the organisation are performed in a manner to sustain the natural resources. The equipment utilised are designed to provide cost effective and reliable results without adversely impacting the ecosystem.
+
+            The primary goal of Weed Hackers is to be the leading role player in the environmental managament industry. By providing around the clock service, Weed Hackers are committed to the company motto, “Do it right the first time".
+        </p>
+
+        <!--start fb.com shit-->
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=1060845233988990&amp;id=1060751173998396&amp;substory_index=0" data-width="500" data-show-text="true">
+                    <blockquote cite="https://www.facebook.com/permalink.php?story_fbid=1060845233988990&amp;id=1060751173998396&amp;substory_index=0"
+                                class="fb-xfbml-parse-ignore">
+                        <p>We have truly established ourselves as a leading commercial and industrial cleaning and maintenance company which...</p>
+                        Posted by <a href="https://www.facebook.com/Weed-Hackers-1060751173998396/">Weed Hackers</a> on&nbsp;
+                        <a href="https://www.facebook.com/permalink.php?story_fbid=1060845233988990&amp;id=1060751173998396&amp;substory_index=0">Sunday, April 3, 2016</a>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=1060862387320608&amp;id=1060751173998396&amp;substory_index=0" data-width="500" data-show-text="true">
+                <blockquote cite="https://www.facebook.com/permalink.php?story_fbid=1060862387320608&amp;id=1060751173998396&amp;substory_index=0" class="fb-xfbml-parse-ignore">
+                    <p>We are committed to providing quality service of the highest standards to our customers , we as a company belive that...
+                    </p>Posted by <a href="https://www.facebook.com/Weed-Hackers-1060751173998396/">Weed Hackers</a> on&nbsp;
+                    <a href="https://www.facebook.com/permalink.php?story_fbid=1060862387320608&amp;id=1060751173998396&amp;substory_index=0">Sunday, April 3, 2016</a></blockquote></div>           
+             </div>
+
+            @RenderBody()
+
+        </div>
+        <!--end fb.com shit-->
+    </div>
+
+    <!--try and incorporate your stats bar here nikki, this one is plain and simple, if you cant, try redisigning it using new code but use the same format-->
+
+        <div class="w3-row w3-center ">
+            <div class="w3-quarter w3-section">
+                <div class="counters-item">
+                    <div>
+                        <h3>150</h3>
+                    </div>
+                    <i class="fa fa-users fa-3x"></i>
+                    <h3>Happy Clients</h3>
+                </div>
+                @*<span class="w3-xlarge">14+</span><br>
+                Partners*@
+            </div>
+            <div class="w3-quarter w3-section">
+                <div class="counters-item">
+                    <div>
+                        <h3>300</h3>
+                    </div>
+                    <i class="fa fa-check-square fa-3x"></i>
+                    <h3>Projects completed</h3>
+                </div>
+            </div>
+            <div class="w3-quarter w3-section">
+                <div class="counters-item">
+                    <div>
+                        <h3>100%</h3>
+                    </div>
+                    <i class="fa fa-thumbs-up fa-3x"></i>
+                    <h3>Positive feedback</h3>
+                </div>
+            </div>
+            <div class="w3-quarter w3-section">
+                <div class="counters-item">
+                    <div>
+                        <h3>120</h3>
+                    </div>
+                    <i class="fa fa-users fa-3x"></i>
+                    <h3>Meetings</h3>
+                </div>
+            </div>
+        </div>
+   
+
+
+    <!-- Second Parallax Image with Gallery Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-black w3-wide">Gallery</span>
+        </div>
+    </div>
+
+    <!-- Container (Gallery Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">OUR GALLERY</h3>
+        <p class="w3-center"><em>Here are some shots of our recent work.</em></p><br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <!--either use your code here nikki or stay with this and modify it-->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="~/Content/Images/lawn-care-643559_1280.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Lawn Care">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/medical.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Medical wate removal">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/in1.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Industrial Cleaning">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/r1.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Waste removal">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="~/Content/Images/Drain-Cleaning.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Drain Cleaning">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/felling.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Tree Felling">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/Fumigation.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Fumigation">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/original.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Weed Removal">
+            </div>
+        </div>
+
+        <!--hidden images-->
+
+        <div class="container">
+            <div id="demo" class="collapse">
+                <div class="w3-col m3">
+                    <img src="~/Content/Images/Drain-Cleaning.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Drain Cleaning">
+                </div>
+                <div class="w3-col m3">
+                    <img src="~/Content/Images/Drain-Cleaning.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Drain Cleaning">
+                </div>
+                <div class="w3-col m3">
+                    <img src="~/Content/Images/Drain-Cleaning.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Drain Cleaning">
+                </div>
+                <div class="w3-col m3">
+                    <img src="~/Content/Images/Drain-Cleaning.jpg" style="width:100%" height="160" onclick="onClick(this)" class="w3-hover-opacity" alt="Drain Cleaning">
+                </div>
+            </div> <!--end section-->
+        </div>
+
+        <!--start section-->
+        <div class="w3-row-padding w3-center w3-section">
+            <button id="loadMore" class="w3-button w3-padding-large w3-green" data-toggle="collapse" data-target="#demo" style="margin-top:20px">LOAD MORE</button>
+            @*<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>*@
+        </div><!--end section-->
+
+        </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+    <!-- Second Parallax Image with Gallery Text -->
+    <<div class="bgimg-2 w3-display-container w3-opacity-min" id="our-team">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-black w3-wide">Team Members</span>
+        </div>
+    </div>
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">OUR TEAM</h3>
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                
+                <img src="~/Content/Images/sw.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CEO">
+                <h6>CEO</h6>
+                 <h4>Maya Singh</h4>
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/tea.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Waste Management Manager">
+            <h6>Waste Management Manager</h6>
+                <h4>Mike Lewis</h4>
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/Asian-women_Pic-3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Estate Maintenance Manager">
+            <h6>Estate Maintenance Manager</h6>
+                <h4>Jennifer Mathews</h4>
+            </div>
+
+            <div class="w3-col m3">
+                <img src="~/Content/Images/1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Industrial Cleaning Manager">
+           <h6>Industrial Cleaning Manager</h6>
+                <h4>Sizwe Mshengi</h4>
+             </div>
+        </div>
+
+       
+    </div>
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-black w3-wide">CONTACT</span>
+        </div>
+    </div>
+   
+
+        <!-- Container (Contact Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="contact">
+            <h3 class="w3-center">WHERE WE ARE BASED</h3>
+            <p class="w3-center"><em>We would love your feedback!</em></p>
+
+            <div class="w3-row w3-padding-32 w3-section">
+                <div class="w3-col m4 w3-container">
+                    <!-- Add Google Maps -->
+                    <div id="googleMap" class="w3-round-large" style="width:100%;height:400px;"></div>
+                </div>
+                <div class="w3-col m8 w3-panel">
+                    <div class="w3-large w3-margin-bottom">
+                        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kwa-Zulu Natal<br>
+                        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 072 608 2092<br>
+                        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: weedhackers@gmail.com<br>
+                    </div>
+                    <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-green w3-right w3-section" type="submit">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--edit the footer as necessary, add links but keep it clean and neat-->
+        <!-- Footer -->
+        @*<footer class="w3-center w3-green  w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <a href="https://twitter.com/HackersWeed"><i class="fa fa-3x fa-fw fa-twitter text-inverse" style="color: white"></i></a>
+                <a href="https://www.facebook.com/Weed-Hackers-1060751173998396/"><i class="fa fa-3x fa-fw fa-facebook text-inverse" style="color: white"></i></a>
+                <a href="http://weedhackers.blogspot.co.za/"><i class="fa fa-3x fa-fw fa-rss text-inverse" style="color: white"></i></a>
+            </div>
+            @*</div>*@
+            @*<p>Powered by <a href="*" title="The Alpha Squad" target="_blank" class="w3-hover-text-black">The Alpha Squad</a></p>
+        </footer>*@<!--footer ending-->
+
+
+    <!--new footer start-->
+    <footer class="w3-center w3-green ">
+        <div id="footer">
+            <div class="container ">
+                <a href="#home" class="w3-button w3-light-grey w3-center" style="margin-top:12px"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3 class="section-title">About Us</h3>
+                        <p>
+                            A Subdivision Of Maxcor IT Solutions.
+                            To be a leading role player,
+                            in the Waste Management Industry
+                             <br />  "Doing it right the first time!"
+                            <br />This web site, and the information which it contains, is the property of Entrust and its affiliates and licensors, and is protected from unauthorized copying and dissemination by United States copyright law, trademark law, international conventions and other intellectual property laws.
+
+
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="section-title">Our Services</h3>
+                        <ul>
+                            <li><a href="#">Medical Waste Removal</a></li>
+                            <li><a href="#">Grass Cutting</a></li>
+                            <li><a href="#">Emergency Spill Cleanup</a></li>
+                            <li><a href="#">Pest And Weed Control</a></li>
+                            <li><a href="#">Rubble Removal</a></li>
+                            <li><a href="#">Fumigation</a></li>
+                            <li><a href="#">Tree Felling</a></li>
+                            <li><a href="#">Sanitation Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="section-title">Our Address</h3>
+                        <ul class="contact-info">
+                            <li><i class="icon-map2"></i>20 Downie Crescent Queensmead Industrial Park Queensburgh</li>
+                            <li><i class="icon-phone2"></i>+27 (0)31 464 3341</li>
+                            <li><i class="icon-envelope2"></i><a href="#">weedhackerss@gmail.com</a></li>
+                            <li><i class="icon-globe2"></i><a href="https://www.facebook.com/Weed-Hackers-1060751173998396/">www.facebook.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-12 hidden-xs text-center">
+
+                        <a href="https://twitter.com/HackersWeed"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                        <a href="https://www.facebook.com/Weed-Hackers-1060751173998396/"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                        <a href="http://weedhackers.blogspot.co.za/"><i class="fa fa-3x fa-fw fa-rss text-inverse"></i></a>
+                    </div>
+                </div>
+
+                <p>&copy; @DateTime.Now.Year - WeedHackers&trade;</p>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+
+        <!-- Add Google Maps -->
+        <script>
+            function myMap() {
+                myCenter = new google.maps.LatLng(-29.878681, 30.907694);
+                var mapOptions = {
+                    center: myCenter,
+                    zoom: 12, scrollwheel: false, draggable: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: myCenter,
+                });
+                marker.setMap(map);
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+
+            // Change style of navbar on scroll
+            window.onscroll = function () { myFunction() };
+            function myFunction() {
+                var navbar = document.getElementById("myNavbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+                }
+            }
+
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function toggleFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_vmly64NLqIaZcKkR5_6R6_UJIePRnQ&callback=myMap"></script>
+        <!--
+        To use this code on your website, get a free API key from Google.
+        Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+        -->
+        <script>
+            $(document).ready(function () {
+                $('a[href*=#]').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname) {
+                        var $target = $(this.hash);
+                        $target = $target.length && $target
+                        || $('[name=' + this.hash.slice(1) + ']');
+                        if ($target.length) {
+                            var targetOffset = $target.offset().top;
+                            $('html,body')
+                            .animate({ scrollTop: targetOffset }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+            @*===============================*@
+        </script>
+</body>
+</html>

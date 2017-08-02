@@ -1,0 +1,11 @@
+﻿.banner {
+  width: 100%;
+  display: block;
+  padding-top: inherit;
+}
+
+    .banner > .banner-image {
+      width:100%;
+      display: block;
+    }
+
